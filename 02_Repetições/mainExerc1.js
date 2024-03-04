@@ -8,10 +8,10 @@ let somaNotas = 0;
 
 let continuar = true;
 while (continuar) {
-    let nota = prompt("Digite a nota do aluno ou escreva 'fim' para encerrar: ");
+    let nota = prompt("Digite a nota do aluno ou escreva 'sair' para encerrar: ");
 
     // Verifica se o usuário deseja encerrar a entrada de notas
-    if (nota.toLowerCase() === 'fim') {
+    if (nota.toLowerCase() === 'sair') {
         continuar = false;
     } else {
         // Converte a entrada para número e verifica se é válido

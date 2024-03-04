@@ -81,32 +81,110 @@ Caso não tenha nenhum número par apresente a mensagem “Todos os números sã
 /*5. Desenvolva um programa que leia 8 números garantindo que os valores informados estejam entre 100 e 200 
 (caso não esteja apresente uma mensagem de “valor inválido”). Depois de preenchido apresente os valores armazenados.*/
 
-const listNumeros = [];
+// const listNumeros = [];
 
-for (let i = 1; i <= 8; i++) {
-    let numero = Number(prompt(`Insira o ${i}º número:`));
+// for (let i = 1; i <= 8; i++) {
+//     let numero = Number(prompt(`Insira o ${i}º número:`));
     
-    if (numero < 100 || numero > 200) {
-        alert("Insira um número entre 100 e 200.");
-    } else {
-        listNumeros.push(numero);
-    }
-}
+//     if (numero < 100 || numero > 200) {
+//         alert("Insira um número entre 100 e 200.");
+//     } else {
+//         listNumeros.push(numero);
+//     }
+// }
 
-console.log("Valores armazenados:", listNumeros);
+// console.log("Valores armazenados:", listNumeros);
 
 
 /*6. Desenvolva um programa que a partir de um vetor de Strings com 10 nomes inicializados na declaração 
 leia um novo nome e verifique se ele está armazenado no vetor, se estiver, apresenta a posição (índice) onde ele está, 
 caso contrário, apresente a mensagem “Nome não encontrado!”*/
 
+
+// const listNomes = ["Maria", "Eduarda", "Adriano", "Erika", "Guilherme", "Emilia", "Magna", "Valter", "Helio", "Lucas"]
+
+// let newName = String(prompt("Insira um nome com a primeira letra maiúscula: "))
+
+// busca = listNomes.indexOf(newName)
+
+// if (busca !== -1){
+//     alert(`O nome inserido ${newName} está armazenado no índice: ${busca}`)
+// }else{
+//     alert(`Nome ${newName} não encontrado!`)
+// }
+
 /*7. Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5. 
 Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.*/
+
+// const listNomes = ["Maria", "Eduarda", "Adriano", "Erika", "Guilherme", "Emilia", "Magna", "Valter", "Helio", "Lucas"]
+
+// let tentativas = 0
+
+// do{
+//     tentativas += 1
+//     let newName = String(prompt("Insira um nome com a primeira letra maiúscula: "))
+    
+//     busca = listNomes.indexOf(newName)
+
+//     if (busca !== -1){
+//         alert(`O nome inserido ${newName} está armazenado no índice: ${busca}. Você acertou na sua ${tentativas}° tentativa`)
+//     }else{
+//         alert(`Nome ${newName} não encontrado!`)
+//     }
+
+// }while(tentativas >= 5)
 
 /*8. Desenvolva um programa que leia 6 números inteiros e armazene em um vetor A. 
 Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A. 
 Apresente os valores dos dois vetores.*/
 
+// let contador03 = 0;
+// let vetorA = []
+// let vetorB = []
+
+// do{
+//     contador03 += 1
+//     let valoresA = Number(prompt(`Insira o ${contador03}° número: `))
+//     vetorA.push(valoresA)
+
+// }while(contador03 < 6)
+
+// for(let i = 0; i < vetorA.length; i++){
+//     valoresB = vetorA[i]/2
+//     vetorB.push(valoresB)
+// }
+
+// alert(`Vetor A: ${vetorA}\nVetor B: ${vetorB} `)
+
 /*9. Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. 
 Leia 5 números inteiros e armazene em um vetor B. 
 Carregue e apresente um vetor C com os valores de A e B alternados. */
+
+
+let contadorA = 0;
+let contadorB = 0;
+let vetA = []
+let vetB = []
+let vetC = []
+
+do{
+    contadorA += 1
+    let valueA = Number(prompt(`Insira o ${contadorA}° número do VetorA: `))
+    vetA.push(valueA)
+
+}while(contadorA < 5)
+
+do{
+    contadorB += 1
+    
+    let valueB = Number(prompt(`Insira o ${contadorB}° número do VetorB: `))
+    vetB.push(valueB)
+
+}while(contadorB < 5)
+
+for (let i = 0; i < vetA.length; i++){
+    vetC.push(vetA[i])
+    vetC.push(vetB[i])
+}
+
+alert(`Vetor A: ${vetA}\nVetor B: ${vetB}\nVetor C: ${vetC}`)
